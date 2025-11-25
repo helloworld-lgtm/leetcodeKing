@@ -1,0 +1,18 @@
+1.和为k的子数组
+哈希表记录前缀和，count += map.get(pre - k);
+if (map.containsKey(sum - k))
+
+2.滑动窗口最大值
+A.单调队列 Deque  LinkedList
+此列人年轻还有能力，替代之
+比别人年轻但能力弱，当候补之
+年纪大了当退休，后没之
+B. 优先队列（大小顶堆）PriorityQueue<int[]>
+int[]一个存数值，一个存索引  offer  peek  poll
+
+3.最小覆盖子串
+比较两个哈希表 哈希表有迭代器，hs.entrySet().iterator();
+滑动窗口思想 先达条件再调整  键对值集合
+如果答案是子串 先存索引再最后生成子串  int[char]
+ASCII码数组
+用count记录次数 当次数为0再进入窗口判断最大/小值
