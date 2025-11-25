@@ -1,0 +1,18 @@
+1.两数之和
+简单地理解了一下哈希，哈希就是来记录一个东西（数据类型随意）
+是否遍历过，单就用 hashset，需要索引或其他反换便是 hashtable
+
+2.字母异位词分组
+字符串排序：① toCharArray() ② Arrays.sort(array) ③ new String(array)
+数组排序：Arrays.sort(nums)
+  
+3.最长连续序列
+判断是否为初始数（在涉及连续时使用，减少时间复杂度到 O(n)）
+Math.max(count, ans)
+排序：for (int i = 1; i < nums.length; i++)
+{ if (nums[i] == nums[i - 1]) continue;
+else if (nums[i] == nums[i - 1] + 1) count++;
+else { ans = Math.max(ans, tmp); tmp = 1; }；
+
+11.25 19:26追更
+哈希表想用来存什么就存什么 只要你想通过一个东西知道一个对应的东西 直接存 例如二叉树里面存父节点
