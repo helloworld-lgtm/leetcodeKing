@@ -13,3 +13,24 @@
 count尽量只针对每一次计数，此题有优良算法
 遍历一个数组左右最小值可以分别从左右遍历
 一定明晰指针变动逻辑，是否全面、合理
+
+双指针可以解决合并类问题 交替合并字符串
+class Solution {
+    public String mergeAlternately(String word1, String word2) {
+        int m = word1.length(), n = word2.length();
+        int i = 0, j = 0;
+
+        StringBuilder ans = new StringBuilder();
+        while (i < m || j < n) {
+            if (i < m) {
+                ans.append(word1.charAt(i));
+                ++i;
+            }
+            if (j < n) {
+                ans.append(word2.charAt(j));
+                ++j;
+            }
+        }
+        return ans.toString();
+    }
+}
