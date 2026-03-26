@@ -8,6 +8,22 @@
 
 3.三数之和
 双指针进行大小变化时注意越界问题，每次变化都要关注是否合理
+ while (l < r) {
+                int sum = nums[l] + nums[r];
+                if (sum == target) {
+                    res.add(Arrays.asList(nums[i], nums[l], nums[r]));
+                    l++;
+                    r--;
+                    // 跳过重复元素
+                    while (l < r && nums[l] == nums[l - 1]) l++;
+                    while (l < r && nums[r] == nums[r + 1]) r--;
+                } else if (sum < target) {
+                    l++;
+                } else {
+                    r--;
+                }
+            }
+三数之和固定一个数就变成两数之和 两数之和排序后当双指针处理
 
 4.接雨水
 count尽量只针对每一次计数，此题有优良算法
